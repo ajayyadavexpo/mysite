@@ -1,12 +1,8 @@
-
 {% extends "./layouts/layout.html %}
-{% load static %}
 {% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-
 {% if latest_question_list %}
-    <ul class="list-group">
+    <ul class="list-group list-group-flush">
     {% for question in latest_question_list %}
         <li class="list-group-item"><span>Q. {{ forloop.counter }} : </span>
         	<a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>

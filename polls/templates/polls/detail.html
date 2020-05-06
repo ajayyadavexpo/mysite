@@ -1,3 +1,5 @@
+{% extends "./layouts/layout.html %}
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 
@@ -14,8 +16,8 @@
 		<label for="choice{{ forloop.counter}}">{{ choice.choice_text }}</label>
 
 	{% endfor %}
-	<button type="submit">Vote</button>
+	<button type="submit" class="btn btn-primary">Vote</button>
 </form>
 
 
-
+{% endblock %}
